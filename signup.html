@@ -12,12 +12,11 @@
 	<title>create new account</title>
 	<style type="text/css">
 		body{
-			/*background-image: url(<?php echo base_url(); ?>/assets/image/fall.jpg);*/
 			background: rgb(238,174,202);
-background: -moz-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1);
+                        background: -moz-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+                        background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+                        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1);
 		}
 	</style>
 </head>
@@ -29,37 +28,33 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endCo
 			</div>
 			<div class="col-lg-8 mt-5 bg-light w-100">
 			<div class="col-lg-6 bg-light w-50 float-left">
-				<img class="img-thumbnail mt-5" src="<?php echo base_url(); ?>/assets/image/signup-image.jpg" alt="img" >
+				<img class="img-thumbnail mt-5" src="assets/image/signup-image.jpg" alt="img" >
 			</div>	
 			<div class="col-lg-6 bg-light w-50 float-right">
 				<h1 class="text-success align-content-center w-100">Create Account</h1>
-				<?php echo "<span class='text-danger'>",validation_errors(),"</span>"; ?>
-				<?php 
-				 echo "<span class='text-danger'>",$this->session->flashdata('msg'),"</span>";
-				echo form_open('admin/regdata'); ?>
 				<div class="form-group">
-					<input type="text" name="name" id="exampleInputName1" class="form-control" aria-describedly="NameHelp" placeholder="User Name" value="<?php echo set_value('name'); ?>">
+					<input type="text" name="name" id="exampleInputName1" class="form-control" aria-describedly="NameHelp" placeholder="User Name" value="">
 				</div>
 
 				<div class="form-group">
-					<input type="text" name="phone" id="exampleInputNumber1" class="form-control" aria-describedly="NameHelp" placeholder="Phone Number" value="<?php echo set_value('phone'); ?>">
+					<input type="text" name="phone" id="exampleInputNumber1" class="form-control" aria-describedly="NameHelp" placeholder="Phone Number" value="">
 				</div>
 
 				<div class="form-group">
-					<input type="email" name="email" id="exampleInputEmail1" class="form-control" aria-describedly="emailHelp" placeholder="Email" value="<?php echo set_value('email'); ?>">
+					<input type="email" name="email" id="exampleInputEmail1" class="form-control" aria-describedly="emailHelp" placeholder="Email" value="">
 				</div>
 
 				<div class="form-group">
-					<input type="password" name="pswd" id="exampleInputPassword1" class="form-control" aria-describedly="emailHelp" placeholder="Password" value="<?php echo set_value('pswd'); ?>">
+					<input type="password" name="pswd" id="exampleInputPassword1" class="form-control" aria-describedly="emailHelp" placeholder="Password" value="">
 				</div>
 
 				<div class="form-group">
-					<input type="password" name="pswdconf" id="exampleInputPassword1" class="form-control" aria-describedly="emailHelp" placeholder="Confirm Password" value="<?php echo set_value('pswdconf'); ?>">
+					<input type="password" name="pswdconf" id="exampleInputPassword1" class="form-control" aria-describedly="emailHelp" placeholder="Confirm Password" value="">
 				</div>
 
 				<button type="submit" class="btn btn-primary mt-3 mb-5 float-left">Submit</button>
 				<?php echo form_close(); ?>
-				<span class="float-left mt-4 ml-3"><?php echo anchor('admin/index',"Have already an Account"); ?></span>
+				<span class="float-left mt-4 ml-3><a href="#">Have already an Account</a></span>
 			</div></div>
 			<div class="col-md-4"></div>
 		</div>
